@@ -2,6 +2,26 @@
 @import "mixin";
 @import "header";
 
+#white {
+  background-color: $white;
+}
+
+#orange {
+  background-color: $orange;
+}
+
+#blue {
+  background-color: $blue;
+}
+
+#pink {
+  background-color: $pink;
+
+  #black {
+    background-color: $black;
+  }
+}
+
 %container {
   display: flex;
   justify-content: space-between;
@@ -39,6 +59,7 @@
   max-width: 1100px;
   margin: 0 auto;
 }
+
 section {
   margin-bottom: 80px;
 }
@@ -78,31 +99,40 @@ section {
 }
 
 .category {
+
   /*section*/
   .wrapper {
     .container {
       @extend %container;
       align-items: stretch;
+
       &:first-child {
         margin-bottom: 3.5%;
       }
+
       .reqtangle {
         width: 31%;
         transition: 0.4s;
+
         &:hover {
           cursor: pointer;
+
           img {
             filter: grayscale(1);
           }
         }
+
         &.big {
           width: 65.5%;
+
           .cover {
             @include cover(47%);
           }
         }
+
         .cover {
           @include cover(100%);
+
           h2 {
             position: absolute;
             bottom: 40%;
@@ -114,6 +144,7 @@ section {
             width: 100%;
             text-align: center;
             cursor: pointer;
+
             &:hover {
               color: $orange;
             }
@@ -123,31 +154,38 @@ section {
     }
   }
 }
+
 .products {
+
   /*section*/
   .products-wrapper {
     max-width: 1100px;
     margin: 0 auto;
+
     .navigation {
       @extend %container;
       width: 50%;
       margin: auto;
       padding: 40px 0px 30px 0px;
+
       a {
         color: black;
         font-size: 20px;
         @include font(700);
         transition: 0.4s;
+
         &:hover {
           color: $orange;
         }
       }
     }
+
     h2,
     a {
       font-family: "Montserrat", sans-serif;
       text-align: center;
     }
+
     h2 {
       font-size: 35px;
       @include font(900);
@@ -155,50 +193,60 @@ section {
 
     .products-container {
       @extend %container;
+
       .card {
         width: 31%;
         align-items: center;
         cursor: pointer;
         transition: 0.4s;
+
         &:hover {
           -webkit-transform: scale(1.1);
           -ms-transform: scale(1.1);
           transform: scale(1.1);
         }
+
         img {
           height: 100%;
           width: 100%;
+
           &:hover {
             box-shadow: 0 7px 14px rgb(65 132 144 / 30%),
               0 3px 6px rgb(0 0 0 / 28%);
           }
         }
+
         h3,
         p {
           text-align: center;
         }
+
         h3 {
           font-family: "Montserrat", sans-serif;
           font-size: 18px;
           padding: 30px 0px 10px 0;
           cursor: pointer;
         }
+
         p {
           padding-bottom: 40px;
           font-size: 20px;
         }
       }
     }
+
     .products-btn {
       width: 25%;
       margin: auto;
       padding: 20px 20px;
     }
+
     .btn {
       @include button($orange);
       background-color: $orange;
       color: $white;
       text-transform: uppercase;
+
       &:hover {
         @include activeButton($orange);
         background-color: $white;
@@ -209,9 +257,11 @@ section {
     }
   }
 }
+
 .newsletter {
   background-color: white;
   margin-bottom: 0px;
+
   h2 {
     font-size: 35px;
     letter-spacing: 2px;
@@ -220,6 +270,7 @@ section {
     text-align: center;
     margin-bottom: 30px;
   }
+
   p {
     font-size: 20px;
     text-align: center;
@@ -227,12 +278,14 @@ section {
     color: gray;
     margin-bottom: 30px;
   }
+
   .email-searh {
     margin-bottom: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
+
   input {
     padding: 7px 5px 7px 20px;
     border-radius: 8px;
@@ -242,11 +295,13 @@ section {
     letter-spacing: 1px;
     width: 40%;
   }
+
   .news-container {
     padding: 0px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     .foto {
       img {
         height: 100%;
@@ -255,20 +310,24 @@ section {
     }
   }
 }
+
 footer {
   background-color: whitesmoke;
   padding-top: 80px;
+
   .wrapper {
     max-width: 1100px;
     margin: 0 auto;
     padding-bottom: 100px;
     display: flex;
     justify-content: space-between;
-     h4 {
+
+    h4 {
       font-size: 20px;
       letter-spacing: 1px;
       @include font(700);
     }
+
     svg {
       cursor: pointer;
       transition: 0.3s;
@@ -279,8 +338,10 @@ footer {
         transform: scale(1.2);
       }
     }
+
     .discriptions {
       width: 30%;
+
       .logo {
         display: flex;
         align-items: baseline;
@@ -289,6 +350,7 @@ footer {
         color: $black;
         margin-bottom: 20px;
         @include font(700);
+
         .ellipse {
           width: 6px;
           height: 6px;
@@ -296,31 +358,39 @@ footer {
           background-color: $orange;
         }
       }
+
       p {
         font-size: 16px;
         text-align: left;
         color: gray;
         margin-bottom: 58px;
       }
+
       .messenger {
         align-items: center;
         justify-content: left;
+
         :first-child {
           padding-left: 0px;
         }
+
         svg {
           padding-left: 10px;
         }
       }
     }
+
     .links {
       width: 30%;
+
       h4 {
         margin-top: 10px;
         margin-bottom: 20px;
       }
+
       .links-container {
         @extend %container;
+
         .block {
           display: flex;
           justify-content: space-between;
@@ -332,6 +402,7 @@ footer {
             margin-bottom: 10px;
             cursor: pointer;
             transition: 0.4s;
+
             &:hover {
               color: orange;
               text-shadow: 0 5px 15px orange;
@@ -340,26 +411,107 @@ footer {
         }
       }
     }
+
     .contacts {
       width: 28%;
+
       h4 {
         margin-top: 10px;
         margin-bottom: 20px;
       }
+
       p {
         font-size: 16px;
         color: gray;
         margin-bottom: 20px;
       }
+
       .payment-cards {
         margin-top: 55px;
         align-items: center;
       }
     }
   }
+
   .info {
     text-align: center;
     color: gray;
     padding-bottom: 20px;
+  }
+}
+
+@import "./pages-style/products";
+
+.card {
+  width: 31%;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.4s;
+
+  &:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+
+    &:hover {
+      box-shadow: 0 7px 14px rgb(65 132 144 / 30%),
+        0 3px 6px rgb(0 0 0 / 28%);
+    }
+  }
+
+  h3,
+  p {
+    text-align: center;
+  }
+
+  h3 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    padding: 30px 0px 10px 0;
+    cursor: pointer;
+  }
+
+  p {
+    padding-bottom: 40px;
+    font-size: 20px;
+  }
+}
+
+.counter {
+  @extend %container;
+  border-radius: 5px;
+  border: 1px solid lightcyan;
+
+  p {
+    font-size: 16px;
+    color: black;
+    padding: 5px 15px;
+    @include font(500);
+  }
+
+  .minus-btn,
+  .plus-btn {
+    font-size: 18px;
+    color: $placeholder;
+    @include font(500);
+    padding: 5px 10px;
+    transition: 0.4s;
+
+    &:hover {
+      background-color: red;
+      color: $white;
+      cursor: pointer;
+    }
+  }
+  .minus-btn {
+    border-radius: 5px 0 05 px;
+  }
+  .plus-btn{
+    border-radius: 0 5px 5px 0;
   }
 }
