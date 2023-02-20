@@ -12,7 +12,7 @@ $pink:#ef5da8;
     font-weight: $size;
 }
 @mixin button($color){
-    width: 100%;
+    width: 40%;
     color: $color;
     border: 1px solid $color;
     @include font(900);

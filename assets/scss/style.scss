@@ -485,7 +485,7 @@ footer {
 .counter {
   @extend %container;
   border-radius: 5px;
-  border: 1px solid lightcyan;
+  border: 1px solid lightgray;
 
   p {
     font-size: 16px;
@@ -517,3 +517,9 @@ footer {
     border-radius: 0px 5px 5px 0px;
   }
 }
+h3 {
+  @include font(700);
+  text-transform: capitalize;
+}
+@import'./pages-style/basket';
+
